@@ -356,22 +356,18 @@ public class StatisticSumYearCalcular {
 			overtimeInside = overtimeInside + data.getOvertimeInside();
 			onegateCount = onegateCount + data.getOnegateCount();
 		}
-		
-
-		/* value get in the latest month */
 		processingCount = latest.getProcessingCount();
 		undueCount = latest.getUndueCount();
 		overdueCount = latest.getOverdueCount();
 		interoperatingCount = latest.getInteroperatingCount();
 		waitingCount = latest.getWaitingCount();
-
 		processCount = releaseCount + processingCount;
-
 		totalCount = processCount + deniedCount + cancelledCount;
-
 		remainingCount = processCount - receivedCount;
-
 		doneCount = releaseCount - (releasingCount + unresolvedCount);
+		
+		/* value get in the latest month */
+		
 		
 		if (releaseCount > 0) {
 			ontimePercentage = (betimesCount + ontimeCount)*100/releaseCount;
@@ -404,7 +400,6 @@ public class StatisticSumYearCalcular {
 		dossierStatisticData.setOnegateCount(onegateCount);
 		dossierStatisticData.setOvertimeInside(overtimeInside);
 		dossierStatisticData.setOvertimeOutside(overtimeOutside);
-		
 		dossierStatisticData.setDomainCode(domainCode);
 		dossierStatisticData.setDomainName(domainName);
 		dossierStatisticData.setGovAgencyCode(govAgencyCode);
