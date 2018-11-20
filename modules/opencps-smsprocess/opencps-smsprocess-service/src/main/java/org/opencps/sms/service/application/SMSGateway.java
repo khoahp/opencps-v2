@@ -107,7 +107,7 @@ public class SMSGateway {
         catch (UpstreamServiceTimedOutException | UpstreamServiceFailedException e) {
             SMSLogAction.updateSMSGatewayLogFail(smsGatewayLog.getSmsId());
             e.printStackTrace();
-        } 
+        }  
 
         return receiveMOResponseType;
     }
